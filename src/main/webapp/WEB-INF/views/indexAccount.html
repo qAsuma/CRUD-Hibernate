@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Acc</title>
+</head>
+<body>
+
+<div th:each="account : ${acc}">
+
+  <a th:href="@{/acc/{id}(id=${account.getId()})}"
+
+     th:text="${account.getEmail()}">user</a>
+</div>
+
+<br/>
+<hr/>
+<a href="/acc/new">Create new </a>
+
+</body>
+</html>
